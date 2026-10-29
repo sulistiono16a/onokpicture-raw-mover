@@ -1,0 +1,18 @@
+ONOKPICTURE - BUILD EXE ONLINE
+
+1. Buat akun GitHub jika belum punya.
+2. Buat repository baru, misalnya: onokpicture-raw-mover
+3. Upload SEMUA isi folder ini ke repository, termasuk folder .github
+4. Buka tab Actions.
+5. Pilih workflow "Build Windows EXE".
+6. Klik "Run workflow" lalu klik tombol hijau "Run workflow".
+7. Setelah proses selesai, buka hasil run.
+8. Di bagian Artifacts, download "Pindahin_File_RAW_by_onokpicture_EXE".
+9. Ekstrak ZIP hasil download. Di dalamnya ada file:
+   Pindahin_File_RAW_by_onokpicture.exe
+
+EXE hasil build dapat dijalankan di Windows tanpa Python.
+
+PERINGATAN:
+Aplikasi menggunakan MOVE/CUT. File asli akan dipindahkan, bukan disalin.
+Uji terlebih dahulu menggunakan salinan folder foto.
