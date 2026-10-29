@@ -1,0 +1,29 @@
+name: Build Windows EXE
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PyInstaller
+        run: python -m pip install --upgrade pip pyinstaller
+
+      - name: Build EXE
+        run: pyinstaller --noconfirm --onefile --windowed --name "Pindahin_File_RAW_by_onokpicture" "Pindahin_File_RAW_by_onokpicture_v4.py"
+
+      - name: Upload EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: Pindahin_File_RAW_by_onokpicture_EXE
+          path: dist/Pindahin_File_RAW_by_onokpicture.exe
